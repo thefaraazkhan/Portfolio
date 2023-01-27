@@ -16,7 +16,7 @@
 <body class="light" id="top">
   <header class="header center">
     <h3>
-      <a href="#" target="_blank" class="link">| F.K. |</a>
+      <a href="https://Zaaraf.github.io/Portfolio" target="_blank" class="link">| F.K. |</a>
     </h3>
 
     <nav class="nav center">
@@ -31,6 +31,39 @@
           <a class="link link--nav" href="#contact">Contact</a>
         </li>
       </ul>
+
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <div class="about center">
+
+      <div class="greeterText">
+        <h3><span class="about__name" id="typedElement"></span></h3>
+      </div>
+
+
+
+
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+      <script>
+        var typed = new Typed('#typedElement', {
+          strings: ['console.log("Hello")^400', 'print("Hello")^400', 'echo "Hello"^400', 'puts "Hello"^400', 'printf("Hello");^400', ],
+          backSpeed: 40,
+          typeSpeed: 70,
+          smartBackspace: false,
+          loop: true,
+        });
+      </script>
 
 
 </body>
