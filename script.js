@@ -50,6 +50,43 @@ btnHamburger.addEventListener('click', displayList);
 // const showMoreBtn = document.getElementById('showMoreBtn');
 // const moreProjectContainer = document.getElementById('moreProjectContainer');
 
+const showMoreBtn = document.getElementById('showMoreBtn');
+const moreProjectContainer = document.getElementById('moreProjectContainer');
+
+showMoreBtn.addEventListener('click', () => {
+  const isHidden = moreProjectContainer.classList.contains('project-hidden');
+
+  if (isHidden) {
+    moreProjectContainer.classList.remove('project-hidden');
+    showMoreBtn.textContent = 'Show Less';
+    setTimeout(() => {
+      moreProjectContainer.style.maxHeight = '1400px'; // Adjust this value based on your design
+
+      window.scrollTo({
+        top: moreProjectContainer.offsetTop,
+        behavior: 'smooth',
+      });
+    }, 50); // Delay to ensure transition works properly
+  } else {
+    moreProjectContainer.style.maxHeight = '0';
+    window.scrollTo({
+      top:
+        moreProjectContainer.offsetTop -
+        window.innerHeight +
+        moreProjectContainer.offsetHeight,
+      behavior: 'smooth',
+    });
+    setTimeout(() => {
+      moreProjectContainer.classList.add('project-hidden');
+      showMoreBtn.textContent = 'Show More';
+    }, 300); // Adjust this value to match your transition duration
+  }
+});
+
+// showMoreBtn.addEventListener('click', () => {
+//   moreProjectContainer.classList.toggle('project-hidden');
+// });
+
 const scrollUp = () => {
   const btnScrollTop = document.querySelector('.scroll-top');
 
