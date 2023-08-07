@@ -60,7 +60,7 @@ showMoreBtn.addEventListener('click', () => {
     moreProjectContainer.classList.remove('project-hidden');
     showMoreBtn.textContent = 'Show Less';
     setTimeout(() => {
-      moreProjectContainer.style.maxHeight = '1400px'; // Adjust this value based on your design
+      moreProjectContainer.style.maxHeight = '1800px'; // Adjust this value based on your design
 
       window.scrollTo({
         top: moreProjectContainer.offsetTop,
